@@ -42,8 +42,28 @@ async function validateAPIKey(apiKey) {
 
 async function startAgent() {
   console.log("Agent is working...");
-  setInterval(async () => {
+  setInterval(() => {
     console.log("Checking server status...");
+
+    // Check Apache status
+    exec("systemctl is-active apache2", (error, stdout, stderr) => {
+      if (error) {
+        console.error(`Apache check error: ${error.message}`);
+        return;
+      }
+
+      if (stderr) {
+        console.error(`Apache stderr: ${stderr}`);
+        return;
+      }
+
+      const status = stdout.trim();
+      if (status === "active") {
+        console.log("✅ Apache is running.");
+      } else {
+        console.log("❌ Apache is not running.");
+      }
+    });
   }, 60000);
 }
 
