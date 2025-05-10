@@ -1,9 +1,9 @@
 Package: server-agent
 Version: 1.0.0
 Architecture: all
-Maintainer: You <you@example.com>
+Maintainer: waiyantun.business@gmail.com
 Depends: nodejs
-Filename: https://waiyantun25.github.io/server-agent-repo/apt-repo/pool/main/s/server-agent/server-agent_1.0.0_all.deb
+Filename: pool/main/s/server-agent/server-agent_1.0.0_all.deb
 Size: 327352
 MD5sum: a4d7cb926e4c59217e86b39cd9bc907f
 SHA1: 4c26f6a3bd1efe291bda1cfc32694239096fa134
@@ -11,4 +11,3 @@ SHA256: c831a92b6a91a312baf21e2d15671354be73d8703f780a60bde2e5f2a393e65e
 Section: base
 Priority: optional
 Description: Server monitoring agent CLI
-
